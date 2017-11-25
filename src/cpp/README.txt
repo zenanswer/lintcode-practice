@@ -7,3 +7,6 @@ test012.cpp 12. 带最小值操作的栈
 test015.cpp 15. 全排列
 test016.cpp 16. 带重复元素的排列
 test017.cpp 17. 子集
+test058.cpp 58. 四数之和
+test208.cpp 208. 赋值运算符重载
+test378.cpp 378. 将二叉查找树转换成双链
