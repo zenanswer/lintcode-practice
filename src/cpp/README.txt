@@ -9,6 +9,7 @@ test016.cpp 16. 带重复元素的排列
 test017.cpp 17. 子集
 test018.cpp 18. 带重复元素的子集
 test029.cpp 29. 交叉字符串
+test031.cpp 31. 数组划分
 test058.cpp 58. 四数之和
 test208.cpp 208. 赋值运算符重载
 test248.cpp 248. 统计比给定整数小的数的个数
