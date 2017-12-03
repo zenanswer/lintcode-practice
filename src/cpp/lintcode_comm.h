@@ -81,7 +81,8 @@ void showVector(vector<T> input) {
   cout << endl;
 }
 
-void show2DVector(vector<vector<int> > input) {
+template<typename T>
+void show2DVector(vector<vector<T> > input) {
   cout << "vector:" << endl;
   for(int i=0; i<input.size(); i++) {
     for(int j=0; j<input[i].size(); j++) {
