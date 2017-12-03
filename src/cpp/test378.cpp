@@ -69,6 +69,6 @@ int main(void) {
     Solution s;
     DoublyListNode * bstToDoublyList = s.bstToDoublyList(&n4);
 
-    showDoublyList(bstToDoublyList);
+    showNodeList(bstToDoublyList);
 
 }

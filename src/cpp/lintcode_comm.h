@@ -29,6 +29,17 @@ public:
    }
 };
 
+//Definition of singly-linked-list:
+class ListNode {
+public:
+    int val;
+    ListNode *next;
+    ListNode(int val) {
+       this->val = val;
+       this->next = NULL;
+    }
+};
+
 //Definition for a point.
 struct Point {
    int x;
@@ -45,13 +56,14 @@ ostream& operator << (ostream& output,Point& c) //定义运算符“<<”重载�
    return output;
 }
 
-void showDoublyList(DoublyListNode * bstToDoublyList) {
-    cout << "DoublyList:" << endl;
-    DoublyListNode* temp = bstToDoublyList;
+template<typename T>
+void showNodeList(T * bstToDoublyList, string separator="<-->") {
+    cout << "NodeList:" << endl;
+    T * temp = bstToDoublyList;
     while(temp != NULL) {
       cout << temp->val;
       if (temp->next!=NULL) {
-        cout << " <-> ";
+        cout << " " << separator << " ";
       }
       temp = temp->next;
     }
