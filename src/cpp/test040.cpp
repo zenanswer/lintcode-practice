@@ -19,16 +19,8 @@ public:
      * @return: An integer
      */
     int pop() {
-        while(m_1st_stack.size()>0) {
-            m_2nd_stack.push(m_1st_stack.top());
-            m_1st_stack.pop();
-        }
-        int value = m_2nd_stack.top();
+        int value = top();
         m_2nd_stack.pop();
-        while(m_2nd_stack.size()>0) {
-            m_1st_stack.push(m_2nd_stack.top());
-            m_2nd_stack.pop();
-        }
         return value;
     }
 
@@ -36,16 +28,13 @@ public:
      * @return: An integer
      */
     int top() {
-      while(m_1st_stack.size()>0) {
-          m_2nd_stack.push(m_1st_stack.top());
-          m_1st_stack.pop();
+      if (m_2nd_stack.size() == 0) {
+          while(m_1st_stack.size()>0) {
+              m_2nd_stack.push(m_1st_stack.top());
+              m_1st_stack.pop();
+          }
       }
-      int value = m_2nd_stack.top();
-      while(m_2nd_stack.size()>0) {
-          m_1st_stack.push(m_2nd_stack.top());
-          m_2nd_stack.pop();
-      }
-      return value;
+      return m_2nd_stack.top();
     }
 };
 
