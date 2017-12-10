@@ -15,6 +15,7 @@ test033.cpp 33. N皇后问题
 test036.cpp 36. 翻转链表 II
 test038.cpp 38. 搜索二维矩阵 II
 test040.cpp 40. 用栈实现队列
+test042.cpp 42. 最大子数组 II 
 test058.cpp 58. 四数之和
 test208.cpp 208. 赋值运算符重载
 test248.cpp 248. 统计比给定整数小的数的个数
