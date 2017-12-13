@@ -84,8 +84,8 @@ void showNodeList(T * bstToDoublyList, string separator="<-->") {
 //}
 
 template<typename T>
-void showVector(vector<T> input) {
-  cout << "vector:" << endl;
+void showVector(vector<T> input, string label="vector:") {
+  cout << label << endl;
   for(int i=0; i<input.size(); i++) {
     cout << input[i];
     if (i!=input.size()-1) {
@@ -96,8 +96,8 @@ void showVector(vector<T> input) {
 }
 
 template<typename T>
-void show2DVector(vector<vector<T> > input) {
-  cout << "vector:" << endl;
+void show2DVector(vector<vector<T> > input, string label="vector:") {
+  cout << label << endl;
   for(int i=0; i<input.size(); i++) {
     for(int j=0; j<input[i].size(); j++) {
       cout << input[i][j];
@@ -110,4 +110,30 @@ void show2DVector(vector<vector<T> > input) {
     }
   }
   cout << endl;
+}
+
+void DLR(TreeNode * root, vector<int> &result) {
+    if (root == NULL) {
+        return;
+    }
+    result.push_back(root->val);
+    if (root->left != NULL) {
+        DLR(root->left, result);
+    }
+    if (root->right != NULL) {
+        DLR(root->right, result);
+    }
+}
+
+void LDR(TreeNode * root, vector<int> &result) {
+    if (root == NULL) {
+        return;
+    }
+    if (root->left != NULL) {
+        LDR(root->left, result);
+    }
+    result.push_back(root->val);
+    if (root->right != NULL) {
+        LDR(root->right, result);
+    }
 }
